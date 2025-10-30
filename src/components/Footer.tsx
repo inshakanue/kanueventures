@@ -12,11 +12,6 @@ const Footer = () => {
                 Building sustainable value and impact with partners and communities.
               </p>
             </div>
-
-            <div className="space-y-2">
-              <p className="text-sm text-muted-foreground uppercase tracking-widest">Location</p>
-              <p className="text-foreground">Kashmir</p>
-            </div>
           </div>
 
           <div className="pt-8 border-t border-border">
