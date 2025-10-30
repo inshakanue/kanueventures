@@ -53,6 +53,12 @@ const Footer = () => {
                 >
                   Our Approach
                 </button>
+                <button
+                  onClick={() => scrollToSection("contact")}
+                  className="text-foreground hover:text-gold transition-colors text-left"
+                >
+                  Contact
+                </button>
               </nav>
             </div>
           </div>
