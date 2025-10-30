@@ -30,24 +30,20 @@ const Hero = () => {
           </div>
 
           <div className="pt-8 animate-fade-in-up" style={{ animationDelay: "0.2s" }}>
-            <div className="inline-block">
-              <div className="h-px w-32 bg-gold mb-4 mx-auto" />
-              <p className="text-sm text-muted-foreground uppercase tracking-widest">
+            <button 
+              onClick={scrollToNext}
+              className="inline-flex flex-col items-center gap-3 cursor-pointer hover:text-gold transition-colors group"
+            >
+              <div className="h-px w-32 bg-gold mb-4" />
+              <p className="text-sm text-muted-foreground uppercase tracking-widest group-hover:text-gold transition-colors">
                 Scroll to Explore
               </p>
-            </div>
+              <ChevronDown className="h-6 w-6 animate-bounce" />
+            </button>
           </div>
         </div>
       </div>
 
-      {/* Scroll Indicator */}
-      <button
-        onClick={scrollToNext}
-        className="absolute bottom-8 left-1/2 -translate-x-1/2 text-muted-foreground hover:text-gold transition-colors animate-bounce"
-        aria-label="Scroll to next section"
-      >
-        <ChevronDown className="h-6 w-6" />
-      </button>
     </section>
   );
 };
