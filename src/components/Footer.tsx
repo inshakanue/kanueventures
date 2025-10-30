@@ -15,7 +15,7 @@ const Footer = () => {
 
             <div className="space-y-2">
               <p className="text-sm text-muted-foreground uppercase tracking-widest">Location</p>
-              <p className="text-foreground">South Kashmir</p>
+              <p className="text-foreground">Kashmir</p>
             </div>
           </div>
 

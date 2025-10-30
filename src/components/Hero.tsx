@@ -33,7 +33,7 @@ const Hero = () => {
             <div className="inline-block">
               <div className="h-px w-32 bg-gold mb-4 mx-auto" />
               <p className="text-sm text-muted-foreground uppercase tracking-widest">
-                Based in South Kashmir
+                Based in Kashmir
               </p>
             </div>
           </div>
