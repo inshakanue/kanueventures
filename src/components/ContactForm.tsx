@@ -185,7 +185,7 @@ const ContactForm = () => {
                 <Button
                   type="submit"
                   size="lg"
-                  className="w-full md:w-auto"
+                  className="w-full md:w-auto bg-gold hover:bg-gold-muted text-background font-semibold"
                   disabled={isSubmitting}
                 >
                   {isSubmitting ? "Sending..." : "Send Message"}
