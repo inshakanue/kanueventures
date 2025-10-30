@@ -1,9 +1,15 @@
+import { ArrowUp } from "lucide-react";
+
 const Footer = () => {
   const scrollToSection = (id: string) => {
     const element = document.getElementById(id);
     if (element) {
       element.scrollIntoView({ behavior: "smooth" });
     }
+  };
+
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
   return (
@@ -21,9 +27,13 @@ const Footer = () => {
             </div>
 
             <div className="space-y-4">
-              <h4 className="text-sm text-muted-foreground uppercase tracking-widest">
-                Navigation
-              </h4>
+              <button
+                onClick={scrollToTop}
+                className="p-3 rounded-full border border-border hover:border-gold hover:text-gold transition-all duration-300 group"
+                aria-label="Scroll to top"
+              >
+                <ArrowUp className="w-5 h-5 group-hover:translate-y-[-2px] transition-transform" />
+              </button>
               <nav className="flex flex-col gap-3">
                 <button
                   onClick={() => scrollToSection("about")}
