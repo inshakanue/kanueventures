@@ -3,6 +3,7 @@ import Hero from "@/components/Hero";
 import AboutAnimated from "@/components/AboutAnimated";
 import FocusAreasAnimated from "@/components/FocusAreasAnimated";
 import ApproachAnimated from "@/components/ApproachAnimated";
+import ContactForm from "@/components/ContactForm";
 import Footer from "@/components/Footer";
 
 const Index = () => {
@@ -13,6 +14,7 @@ const Index = () => {
       <AboutAnimated />
       <FocusAreasAnimated />
       <ApproachAnimated />
+      <ContactForm />
       <Footer />
     </div>
   );

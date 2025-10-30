@@ -41,6 +41,12 @@ const Navigation = () => {
             >
               Our Approach
             </button>
+            <button
+              onClick={() => scrollToSection("contact")}
+              className="text-muted-foreground hover:text-gold transition-colors"
+            >
+              Contact
+            </button>
           </div>
 
           {/* Mobile Menu Button */}
@@ -74,6 +80,12 @@ const Navigation = () => {
               className="block text-muted-foreground hover:text-gold transition-colors"
             >
               Our Approach
+            </button>
+            <button
+              onClick={() => scrollToSection("contact")}
+              className="block text-muted-foreground hover:text-gold transition-colors"
+            >
+              Contact
             </button>
           </div>
         )}
