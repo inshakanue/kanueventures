@@ -33,7 +33,7 @@ const Hero = () => {
             <div className="inline-block">
               <div className="h-px w-32 bg-gold mb-4 mx-auto" />
               <p className="text-sm text-muted-foreground uppercase tracking-widest">
-                Based in Kashmir
+                Scroll to Explore
               </p>
             </div>
           </div>
@@ -43,9 +43,9 @@ const Hero = () => {
       {/* Scroll Indicator */}
       <button
         onClick={scrollToNext}
-        className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-muted-foreground hover:text-gold transition-colors animate-bounce"
+        className="absolute bottom-8 left-1/2 -translate-x-1/2 text-muted-foreground hover:text-gold transition-colors animate-bounce"
+        aria-label="Scroll to next section"
       >
-        <span className="text-xs uppercase tracking-widest">Scroll to Explore</span>
         <ChevronDown className="h-6 w-6" />
       </button>
     </section>
