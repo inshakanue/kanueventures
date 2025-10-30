@@ -18,8 +18,8 @@ All colors MUST be HSL.
     --popover: 0 0% 10%;
     --popover-foreground: 40 10% 92%;
 
-    --primary: 45 100% 55%;
-    --primary-foreground: 0 0% 6%;
+    --primary: 334 78% 52%;
+    --primary-foreground: 0 0% 100%;
 
     --secondary: 0 0% 14%;
     --secondary-foreground: 40 10% 92%;
@@ -27,22 +27,22 @@ All colors MUST be HSL.
     --muted: 0 0% 16%;
     --muted-foreground: 40 5% 60%;
 
-    --accent: 45 100% 55%;
-    --accent-foreground: 0 0% 6%;
+    --accent: 334 78% 52%;
+    --accent-foreground: 0 0% 100%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 40 10% 92%;
 
     --border: 0 0% 20%;
     --input: 0 0% 20%;
-    --ring: 45 100% 55%;
+    --ring: 334 78% 52%;
 
     --radius: 0.5rem;
 
     /* Custom design tokens */
     --cream: 40 10% 92%;
-    --gold: 45 100% 55%;
-    --gold-muted: 45 80% 45%;
+    --gold: 334 78% 52%;
+    --gold-muted: 334 68% 42%;
     --charcoal: 0 0% 10%;
     --charcoal-lighter: 0 0% 16%;
   }
