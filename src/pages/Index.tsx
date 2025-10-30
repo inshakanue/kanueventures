@@ -1,8 +1,8 @@
 import Navigation from "@/components/Navigation";
 import Hero from "@/components/Hero";
-import About from "@/components/About";
-import FocusAreas from "@/components/FocusAreas";
-import Approach from "@/components/Approach";
+import AboutAnimated from "@/components/AboutAnimated";
+import FocusAreasAnimated from "@/components/FocusAreasAnimated";
+import ApproachAnimated from "@/components/ApproachAnimated";
 import Footer from "@/components/Footer";
 
 const Index = () => {
@@ -10,9 +10,9 @@ const Index = () => {
     <div className="min-h-screen bg-background">
       <Navigation />
       <Hero />
-      <About />
-      <FocusAreas />
-      <Approach />
+      <AboutAnimated />
+      <FocusAreasAnimated />
+      <ApproachAnimated />
       <Footer />
     </div>
   );
