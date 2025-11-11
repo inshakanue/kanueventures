@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import logo from "@/assets/kanue-logo.png";
 
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -17,9 +18,11 @@ const Navigation = () => {
     <nav className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-lg border-b border-border">
       <div className="container mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
-          <h1 className="text-2xl font-bold text-foreground">
-            KANUE <span className="text-gold">VENTURES</span>
-          </h1>
+          <img 
+            src={logo} 
+            alt="Kanue Ventures" 
+            className="h-8 md:h-10 w-auto"
+          />
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center gap-8">

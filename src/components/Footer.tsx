@@ -1,4 +1,5 @@
 import { ArrowUp } from "lucide-react";
+import logo from "@/assets/kanue-logo.png";
 
 const Footer = () => {
   const scrollToSection = (id: string) => {
@@ -18,9 +19,11 @@ const Footer = () => {
         <div className="max-w-6xl mx-auto space-y-8">
           <div className="flex flex-col md:flex-row justify-between items-start gap-8">
             <div className="space-y-4">
-              <h3 className="text-2xl font-bold text-foreground">
-                KANUE <span className="text-gold">VENTURES</span>
-              </h3>
+              <img 
+                src={logo} 
+                alt="Kanue Ventures" 
+                className="h-10 w-auto"
+              />
               <p className="text-muted-foreground max-w-md">
                 Building sustainable value and impact with partners and communities.
               </p>
