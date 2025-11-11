@@ -5,6 +5,7 @@ import logo from "@/assets/kanue-logo.png";
 
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [logoLoaded, setLogoLoaded] = useState(false);
 
   const scrollToSection = (id: string) => {
     const element = document.getElementById(id);
@@ -18,12 +19,20 @@ const Navigation = () => {
     <nav className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-lg border-b border-border">
       <div className="container mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
-          <img 
-            src={logo} 
-            alt="Kanue Ventures" 
-            className="h-8 md:h-10 w-auto cursor-pointer transition-all duration-300 hover:scale-110 hover:brightness-110"
-            onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-          />
+          <div className="relative">
+            {!logoLoaded && (
+              <div className="h-8 md:h-10 w-32 bg-muted/30 animate-pulse rounded" />
+            )}
+            <img 
+              src={logo} 
+              alt="Kanue Ventures" 
+              className={`h-8 md:h-10 w-auto cursor-pointer transition-all duration-300 hover:scale-110 hover:brightness-110 ${
+                logoLoaded ? 'opacity-100' : 'opacity-0 absolute top-0 left-0'
+              }`}
+              onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+              onLoad={() => setLogoLoaded(true)}
+            />
+          </div>
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center gap-8">
