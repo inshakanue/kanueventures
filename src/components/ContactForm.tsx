@@ -60,25 +60,30 @@ const ContactForm = () => {
     setIsSubmitting(true);
     
     try {
-      // Encode data for mailto
-      const subject = encodeURIComponent(`New Contact from ${data.name}`);
-      const body = encodeURIComponent(
-        `Name: ${data.name}\nEmail: ${data.email}\n${data.company ? `Company: ${data.company}\n` : ""}\nMessage:\n${data.message}`
-      );
-      
-      // Open mailto link
-      window.location.href = `mailto:contact@kanueventures.com?subject=${subject}&body=${body}`;
+      const response = await fetch(`${import.meta.env.VITE_SUPABASE_URL}/functions/v1/send-contact-email`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Authorization': `Bearer ${import.meta.env.VITE_SUPABASE_ANON_KEY}`,
+        },
+        body: JSON.stringify(data),
+      });
+
+      if (!response.ok) {
+        throw new Error('Failed to send message');
+      }
       
       toast({
-        title: "Opening email client",
-        description: "Your default email client will open with the message.",
+        title: "Message sent!",
+        description: "We'll get back to you as soon as possible.",
       });
       
       form.reset();
     } catch (error) {
+      console.error('Contact form error:', error);
       toast({
         title: "Error",
-        description: "Something went wrong. Please try again.",
+        description: "Failed to send message. Please try again.",
         variant: "destructive",
       });
     } finally {
