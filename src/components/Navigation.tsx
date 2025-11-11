@@ -21,7 +21,8 @@ const Navigation = () => {
           <img 
             src={logo} 
             alt="Kanue Ventures" 
-            className="h-8 md:h-10 w-auto"
+            className="h-8 md:h-10 w-auto cursor-pointer transition-all duration-300 hover:scale-110 hover:brightness-110"
+            onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
           />
 
           {/* Desktop Navigation */}
