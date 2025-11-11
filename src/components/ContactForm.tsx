@@ -123,7 +123,7 @@ const ContactForm = () => {
                           <Input
                             placeholder="Your name"
                             {...field}
-                            className="bg-background"
+                            className="bg-background text-foreground"
                           />
                         </FormControl>
                         <FormMessage />
@@ -142,7 +142,7 @@ const ContactForm = () => {
                             type="email"
                             placeholder="your@email.com"
                             {...field}
-                            className="bg-background"
+                            className="bg-background text-foreground"
                           />
                         </FormControl>
                         <FormMessage />
@@ -157,13 +157,13 @@ const ContactForm = () => {
                   render={({ field }) => (
                     <FormItem>
                       <FormLabel>Company</FormLabel>
-                      <FormControl>
-                        <Input
-                          placeholder="Your company name"
-                          {...field}
-                          className="bg-background"
-                        />
-                      </FormControl>
+                        <FormControl>
+                          <Input
+                            placeholder="Your company name"
+                            {...field}
+                            className="bg-background text-foreground"
+                          />
+                        </FormControl>
                       <FormMessage />
                     </FormItem>
                   )}
@@ -178,7 +178,7 @@ const ContactForm = () => {
                       <FormControl>
                         <Textarea
                           placeholder="Tell us about your project..."
-                          className="min-h-[150px] bg-background"
+                          className="min-h-[150px] bg-background text-foreground"
                           {...field}
                         />
                       </FormControl>
