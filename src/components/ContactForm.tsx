@@ -2,6 +2,7 @@ import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
+import { Mail } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
@@ -107,6 +108,24 @@ const ContactForm = () => {
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
               Are you a founder building something transformative? We'd love to hear from you.
             </p>
+          </div>
+
+          {/* Direct Email Button */}
+          <div className="text-center mb-8">
+            <a
+              href="mailto:contact@kanueventures.com"
+              className="inline-flex items-center gap-3 px-8 py-4 bg-gold hover:bg-gold/90 text-background font-semibold rounded-lg transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-xl"
+            >
+              <Mail className="h-5 w-5" />
+              Send Direct Email
+            </a>
+          </div>
+
+          {/* Separator */}
+          <div className="flex items-center gap-4 mb-8">
+            <div className="flex-1 h-px bg-border" />
+            <span className="text-muted-foreground text-sm uppercase tracking-wider">or use the form</span>
+            <div className="flex-1 h-px bg-border" />
           </div>
 
           <div className="bg-card border border-border rounded-lg p-8 md:p-12">
