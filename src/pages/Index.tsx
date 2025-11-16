@@ -5,10 +5,12 @@ import FocusAreasAnimated from "@/components/FocusAreasAnimated";
 import ApproachAnimated from "@/components/ApproachAnimated";
 import ContactForm from "@/components/ContactForm";
 import Footer from "@/components/Footer";
+import ScrollProgress from "@/components/ScrollProgress";
 
 const Index = () => {
   return (
     <div className="min-h-screen bg-background">
+      <ScrollProgress />
       <Navigation />
       <Hero />
       <AboutAnimated />
