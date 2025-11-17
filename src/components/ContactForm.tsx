@@ -113,7 +113,7 @@ const ContactForm = () => {
           {/* Contact Options */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
             <a
-              href="mailto:contact@kanueventures.com"
+              href="mailto:kanueventures@gmail.com"
               className="inline-flex items-center gap-3 px-8 py-4 bg-gold hover:bg-gold/90 text-background font-semibold rounded-lg transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-xl"
             >
               <Mail className="h-5 w-5" />
