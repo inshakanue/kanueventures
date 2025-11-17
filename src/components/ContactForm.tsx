@@ -2,7 +2,7 @@ import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
-import { Mail } from "lucide-react";
+import { Mail, Linkedin } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
@@ -110,14 +110,23 @@ const ContactForm = () => {
             </p>
           </div>
 
-          {/* Direct Email Button */}
-          <div className="text-center mb-8">
+          {/* Contact Options */}
+          <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
             <a
               href="mailto:contact@kanueventures.com"
               className="inline-flex items-center gap-3 px-8 py-4 bg-gold hover:bg-gold/90 text-background font-semibold rounded-lg transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-xl"
             >
               <Mail className="h-5 w-5" />
               Send Direct Email
+            </a>
+            <a
+              href="https://www.linkedin.com/company/kanueventures"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-3 px-8 py-4 bg-gold hover:bg-gold/90 text-background font-semibold rounded-lg transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-xl"
+            >
+              <Linkedin className="h-5 w-5" />
+              Connect on LinkedIn
             </a>
           </div>
 
