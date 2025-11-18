@@ -1,5 +1,6 @@
 import { Card } from "@/components/ui/card";
 import { useScrollAnimation } from "@/hooks/use-scroll-animation";
+import { useParallax } from "@/hooks/use-parallax";
 import { 
   Sprout, 
   Pill, 
@@ -65,20 +66,25 @@ const focusAreas = [
 const FocusAreasAnimated = () => {
   const { ref: headerRef, isVisible: headerVisible } = useScrollAnimation();
   const { ref: gridRef, isVisible: gridVisible } = useScrollAnimation();
+  const { ref: parallaxRef, offset } = useParallax(0.3);
 
   return (
     <section id="focus" className="py-32 bg-background relative overflow-hidden">
-      {/* Background decoration */}
-      <div className="absolute inset-0 opacity-5">
-        <div className="absolute top-1/4 left-0 w-full h-px bg-gradient-to-r from-transparent via-gold to-transparent" />
-        <div className="absolute bottom-1/4 right-0 w-full h-px bg-gradient-to-r from-transparent via-gold to-transparent" />
+      {/* Background decoration with Parallax */}
+      <div 
+        ref={parallaxRef}
+        className="absolute inset-0 opacity-5"
+        style={{ transform: `translateY(${offset}px)` }}
+      >
+        <div className="absolute top-1/4 left-0 w-full h-px bg-gradient-to-r from-transparent via-gold to-transparent transition-transform duration-700" />
+        <div className="absolute bottom-1/4 right-0 w-full h-px bg-gradient-to-r from-transparent via-gold to-transparent transition-transform duration-700" />
       </div>
 
       <div className="container mx-auto px-6 relative z-10">
         <div className="max-w-6xl mx-auto space-y-16">
           <div
             ref={headerRef}
-            className={`text-center space-y-6 transition-all duration-1000 ${
+            className={`text-center space-y-6 transition-all duration-1000 ease-out ${
               headerVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
             }`}
           >
@@ -96,7 +102,7 @@ const FocusAreasAnimated = () => {
               return (
                 <Card
                   key={area.number}
-                  className={`p-6 bg-card border-border hover:border-gold transition-all duration-500 group cursor-pointer ${
+                  className={`p-6 bg-card border-border hover:border-gold transition-all duration-700 ease-out group cursor-pointer hover:scale-105 hover:shadow-xl hover:shadow-gold/10 ${
                     gridVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
                   }`}
                   style={{ 

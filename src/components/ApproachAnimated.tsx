@@ -1,5 +1,6 @@
 import { Card } from "@/components/ui/card";
 import { useScrollAnimation } from "@/hooks/use-scroll-animation";
+import { useParallax } from "@/hooks/use-parallax";
 
 const principles = [
   {
@@ -24,18 +25,25 @@ const ApproachAnimated = () => {
   const { ref: headerRef, isVisible: headerVisible } = useScrollAnimation();
   const { ref: gridRef, isVisible: gridVisible } = useScrollAnimation();
   const { ref: quoteRef, isVisible: quoteVisible } = useScrollAnimation();
+  const { ref: parallaxRef, offset } = useParallax(0.5);
 
   return (
     <section id="approach" className="py-32 bg-charcoal-lighter relative overflow-hidden">
-      {/* Decorative background elements */}
-      <div className="absolute top-10 left-0 w-96 h-96 border border-gold/5 -rotate-12" />
-      <div className="absolute bottom-10 right-0 w-72 h-72 border border-gold/5 rotate-45" />
+      {/* Decorative background elements with Parallax */}
+      <div 
+        ref={parallaxRef}
+        className="absolute inset-0"
+        style={{ transform: `translateY(${offset}px)` }}
+      >
+        <div className="absolute top-10 left-0 w-96 h-96 border border-gold/5 -rotate-12 transition-transform duration-700" />
+        <div className="absolute bottom-10 right-0 w-72 h-72 border border-gold/5 rotate-45 transition-transform duration-700" />
+      </div>
 
       <div className="container mx-auto px-6 relative z-10">
         <div className="max-w-6xl mx-auto space-y-16">
           <div
             ref={headerRef}
-            className={`max-w-3xl space-y-6 transition-all duration-1000 ${
+            className={`max-w-3xl space-y-6 transition-all duration-1000 ease-out ${
               headerVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
             }`}
           >
@@ -53,7 +61,7 @@ const ApproachAnimated = () => {
             {principles.map((principle, index) => (
               <Card
                 key={principle.title}
-                className={`p-8 bg-card border-border hover:border-gold transition-all duration-700 hover:scale-105 ${
+                className={`p-8 bg-card border-border hover:border-gold transition-all duration-700 ease-out hover:scale-105 hover:shadow-xl hover:shadow-gold/10 ${
                   gridVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
                 }`}
                 style={{ 
@@ -74,7 +82,7 @@ const ApproachAnimated = () => {
 
           <div
             ref={quoteRef}
-            className={`pt-8 space-y-6 transition-all duration-1000 ${
+            className={`pt-8 space-y-6 transition-all duration-1000 ease-out ${
               quoteVisible ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-10"
             }`}
           >
