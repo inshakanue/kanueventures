@@ -41,10 +41,10 @@ const Hero = () => {
 
       <div 
         ref={parallaxRef3}
-        className="container mx-auto px-6 py-32 relative z-10"
+        className="container mx-auto px-6 py-20 relative z-10"
         style={{ transform: `translateY(${-offset3 * 0.3}px)` }}
       >
-        <div className="max-w-5xl mx-auto text-center space-y-8">
+        <div className="max-w-5xl mx-auto text-center space-y-6">
           <div className="space-y-4 animate-fade-in-up">
             <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold text-foreground leading-tight transition-transform duration-700 ease-out">
               Building Sustainable Value in{" "}
@@ -55,7 +55,7 @@ const Hero = () => {
             </p>
           </div>
 
-          <div className="pt-8 animate-fade-in-up transition-all duration-700 ease-out" style={{ animationDelay: "0.2s" }}>
+          <div className="pt-6 animate-fade-in-up transition-all duration-700 ease-out" style={{ animationDelay: "0.2s" }}>
             <button 
               onClick={scrollToNext}
               className="inline-flex flex-col items-center gap-3 cursor-pointer hover:text-gold transition-all duration-300 group"
