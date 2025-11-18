@@ -1,21 +1,29 @@
 import { useScrollAnimation } from "@/hooks/use-scroll-animation";
+import { useParallax } from "@/hooks/use-parallax";
 
 const AboutAnimated = () => {
   const { ref: titleRef, isVisible: titleVisible } = useScrollAnimation();
   const { ref: col1Ref, isVisible: col1Visible } = useScrollAnimation();
   const { ref: col2Ref, isVisible: col2Visible } = useScrollAnimation();
+  const { ref: parallaxRef, offset } = useParallax(0.4);
 
   return (
     <section id="about" className="py-32 bg-charcoal-lighter relative overflow-hidden">
-      {/* Decorative Elements */}
-      <div className="absolute top-20 right-10 w-64 h-64 border border-gold/10 rotate-45" />
-      <div className="absolute bottom-20 left-10 w-48 h-48 border border-gold/5" />
+      {/* Decorative Elements with Parallax */}
+      <div 
+        ref={parallaxRef}
+        className="absolute inset-0"
+        style={{ transform: `translateY(${offset}px)` }}
+      >
+        <div className="absolute top-20 right-10 w-64 h-64 border border-gold/10 rotate-45 transition-transform duration-700" />
+        <div className="absolute bottom-20 left-10 w-48 h-48 border border-gold/5 transition-transform duration-700" />
+      </div>
       
       <div className="container mx-auto px-6 relative z-10">
         <div className="max-w-4xl mx-auto space-y-16">
           <div
             ref={titleRef}
-            className={`space-y-6 transition-all duration-1000 ${
+            className={`space-y-6 transition-all duration-1000 ease-out ${
               titleVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
             }`}
           >
@@ -28,7 +36,7 @@ const AboutAnimated = () => {
           <div className="grid md:grid-cols-2 gap-12">
             <div
               ref={col1Ref}
-              className={`space-y-6 transition-all duration-1000 delay-200 ${
+              className={`space-y-6 transition-all duration-1000 delay-200 ease-out ${
                 col1Visible ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-10"
               }`}
             >
@@ -45,7 +53,7 @@ const AboutAnimated = () => {
 
             <div
               ref={col2Ref}
-              className={`space-y-6 transition-all duration-1000 delay-300 ${
+              className={`space-y-6 transition-all duration-1000 delay-300 ease-out ${
                 col2Visible ? "opacity-100 translate-x-0" : "opacity-0 translate-x-10"
               }`}
             >
