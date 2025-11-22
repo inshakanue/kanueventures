@@ -116,9 +116,9 @@ const FocusAreasAnimated = () => {
                         {area.number}
                       </span>
                       {Icon === "travel" ? (
-                        <div className="flex gap-1 text-gold transform group-hover:scale-110 transition-transform duration-300">
-                          <Plane className="h-5 w-5" />
-                          <Hotel className="h-5 w-5" />
+                        <div className="relative text-gold transform group-hover:scale-110 transition-transform duration-300">
+                          <Hotel className="h-6 w-6" />
+                          <Plane className="h-3 w-3 absolute -top-1 -left-1" />
                         </div>
                       ) : (
                         <Icon className="h-6 w-6 text-gold transform group-hover:scale-110 transition-transform duration-300" />
