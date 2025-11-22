@@ -1,6 +1,6 @@
 # Kanue Ventures
 
-A modern, responsive website for Kanue Ventures - a family-owned investment firm based in South Kashmir, building sustainable value in future-ready businesses across critical sectors.
+A modern, responsive website for Kanue Ventures - a family-owned investment firm, building sustainable value in future-ready businesses across critical sectors.
 
 ## 🌟 Features
 
@@ -74,11 +74,11 @@ The project uses a comprehensive design system with semantic color tokens define
 
 ## 🌐 Deployment
 
-The site is deployed via Lovable Cloud. Frontend changes require clicking "Update" in the publish dialog, while backend changes deploy automatically.
+The site is deployed via Lovable Cloud. 
 
 ## 📧 Contact
 
-For inquiries about Kanue Ventures, please use the contact form on the website or visit our office in South Kashmir.
+For inquiries about Kanue Ventures, please send us a direct email or use the contact form on the website.
 
 ## 📄 License
 
