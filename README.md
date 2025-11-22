@@ -78,7 +78,7 @@ The site is deployed via Lovable Cloud.
 
 ## 📧 Contact
 
-For inquiries about Kanue Ventures, please send us a direct email or use the contact form on the website.
+For inquiries about Kanue Ventures, please send us a direct email or connect with us by sending a DM on LinkedIn.
 
 ## 📄 License
 
