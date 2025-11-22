@@ -5,7 +5,8 @@ import {
   Sprout, 
   Pill, 
   Truck, 
-  Plane, 
+  Plane,
+  Hotel, 
   UtensilsCrossed, 
   ShoppingBag, 
   Bitcoin, 
@@ -35,7 +36,7 @@ const focusAreas = [
     number: "04",
     title: "Travel & Hospitality",
     description: "Reimagining experiences in tourism and hospitality",
-    icon: Plane,
+    icon: "travel",
   },
   {
     number: "05",
@@ -114,7 +115,14 @@ const FocusAreasAnimated = () => {
                       <span className="text-5xl font-bold text-muted-foreground/20 group-hover:text-gold/20 transition-colors duration-300">
                         {area.number}
                       </span>
-                      <Icon className="h-6 w-6 text-gold transform group-hover:scale-110 transition-transform duration-300" />
+                      {Icon === "travel" ? (
+                        <div className="flex gap-1 text-gold transform group-hover:scale-110 transition-transform duration-300">
+                          <Plane className="h-5 w-5" />
+                          <Hotel className="h-5 w-5" />
+                        </div>
+                      ) : (
+                        <Icon className="h-6 w-6 text-gold transform group-hover:scale-110 transition-transform duration-300" />
+                      )}
                     </div>
                     <div className="space-y-2">
                       <h3 className="text-xl font-bold text-foreground group-hover:text-gold transition-colors duration-300">
