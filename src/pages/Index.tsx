@@ -13,10 +13,12 @@ const Index = () => {
       <ScrollProgress />
       <Navigation />
       <Hero />
-      <AboutAnimated />
-      <FocusAreasAnimated />
-      <ApproachAnimated />
-      <ContactForm />
+      <main>
+        <AboutAnimated />
+        <FocusAreasAnimated />
+        <ApproachAnimated />
+        <ContactForm />
+      </main>
       <Footer />
     </div>
   );

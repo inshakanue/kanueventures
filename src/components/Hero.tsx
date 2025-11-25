@@ -14,7 +14,7 @@ const Hero = () => {
   };
 
   return (
-    <section className="min-h-screen flex items-center justify-center relative overflow-hidden">
+    <header className="min-h-screen flex items-center justify-center relative overflow-hidden">
       {/* Animated Geometric Background Pattern with Parallax */}
       <div 
         ref={parallaxRef1}
@@ -50,8 +50,8 @@ const Hero = () => {
               Building Sustainable Value in{" "}
               <span className="text-gold">Future-Ready</span> Businesses
             </h1>
-            <p className="text-xl md:text-2xl text-muted-foreground max-w-3xl mx-auto transition-all duration-700 ease-out">
-              We back determined builders working on transformative solutions in critical sectors.
+            <p className="text-xl md:text-2xl text-muted-foreground max-w-3xl mx-auto transition-all duration-700 ease-out" role="doc-subtitle">
+              Kashmir-based investment firm backing determined builders working on transformative solutions in critical sectors
             </p>
           </div>
 
@@ -59,18 +59,19 @@ const Hero = () => {
             <button 
               onClick={scrollToNext}
               className="inline-flex flex-col items-center gap-3 cursor-pointer hover:text-gold transition-all duration-300 group"
+              aria-label="Scroll to About section"
             >
-              <div className="h-px w-32 bg-gold mb-4 transition-all duration-300 group-hover:w-40" />
-              <p className="text-sm text-muted-foreground uppercase tracking-widest group-hover:text-gold transition-all duration-300">
+              <div className="h-px w-32 bg-gold mb-4 transition-all duration-300 group-hover:w-40" aria-hidden="true" />
+              <span className="text-sm text-muted-foreground uppercase tracking-widest group-hover:text-gold transition-all duration-300">
                 Scroll to Explore
-              </p>
-              <ChevronDown className="h-6 w-6 animate-bounce" />
+              </span>
+              <ChevronDown className="h-6 w-6 animate-bounce" aria-hidden="true" />
             </button>
           </div>
         </div>
       </div>
 
-    </section>
+    </header>
   );
 };
 
