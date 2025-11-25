@@ -42,7 +42,7 @@ const AboutAnimated = () => {
             >
               <p className="text-lg text-muted-foreground leading-relaxed">
                 At Kanue Ventures, we believe that true innovation happens at the intersection of 
-                vision and execution. We are a family-owned investment firm based in South Kashmir, 
+                vision and execution. We are a family-owned investment firm based in Kashmir, 
                 committed to partnering with entrepreneurs who are shaping the future.
               </p>
               <p className="text-lg text-muted-foreground leading-relaxed">
