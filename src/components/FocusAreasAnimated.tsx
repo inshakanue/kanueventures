@@ -70,7 +70,7 @@ const FocusAreasAnimated = () => {
   const { ref: parallaxRef, offset } = useParallax(0.3);
 
   return (
-    <section id="focus" className="py-32 bg-background relative overflow-hidden">
+    <section id="focus" className="py-32 bg-background relative overflow-hidden" aria-labelledby="focus-heading">
       {/* Background decoration with Parallax */}
       <div 
         ref={parallaxRef}
@@ -89,11 +89,11 @@ const FocusAreasAnimated = () => {
               headerVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
             }`}
           >
-            <h2 className="text-4xl md:text-5xl font-bold text-foreground">
+            <h2 id="focus-heading" className="text-4xl md:text-5xl font-bold text-foreground">
               Areas of <span className="text-gold">Focus</span>
             </h2>
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-              We invest across critical sectors that are shaping our collective future
+              Strategic investments across critical sectors including AgriTech, Pharma, Logistics, Travel, F&B, E-commerce, Crypto, and Energy
             </p>
           </div>
 
@@ -116,12 +116,12 @@ const FocusAreasAnimated = () => {
                         {area.number}
                       </span>
                       {Icon === "travel" ? (
-                        <div className="relative text-gold transform group-hover:scale-110 transition-transform duration-300">
-                          <Hotel className="h-6 w-6" />
-                          <Plane className="h-4 w-4 absolute -top-1.5 -left-1.5" />
+                        <div className="relative text-gold transform group-hover:scale-110 transition-transform duration-300" role="img" aria-label="Travel and Hospitality icon">
+                          <Hotel className="h-6 w-6" aria-hidden="true" />
+                          <Plane className="h-4 w-4 absolute -top-1.5 -left-1.5" aria-hidden="true" />
                         </div>
                       ) : (
-                        <Icon className="h-6 w-6 text-gold transform group-hover:scale-110 transition-transform duration-300" />
+                        <Icon className="h-6 w-6 text-gold transform group-hover:scale-110 transition-transform duration-300" aria-hidden="true" />
                       )}
                     </div>
                     <div className="space-y-2">

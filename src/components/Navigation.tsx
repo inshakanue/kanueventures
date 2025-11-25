@@ -16,7 +16,7 @@ const Navigation = () => {
   };
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-lg border-b border-border">
+    <nav className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-lg border-b border-border" role="navigation" aria-label="Main navigation">
       <div className="container mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
           <div className="relative">
@@ -25,17 +25,19 @@ const Navigation = () => {
             )}
             <img 
               src={logo} 
-              alt="Kanue Ventures" 
+              alt="Kanue Ventures - Kashmir Investment Firm" 
               className={`h-8 md:h-10 w-auto cursor-pointer transition-all duration-300 hover:scale-110 hover:brightness-110 ${
                 logoLoaded ? 'opacity-100' : 'opacity-0 absolute top-0 left-0'
               }`}
               onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
               onLoad={() => setLogoLoaded(true)}
+              width="128"
+              height="40"
             />
           </div>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center gap-8">
+          <div className="hidden md:flex items-center gap-8" role="menu">
             <button
               onClick={() => scrollToSection("about")}
               className="text-muted-foreground hover:text-gold transition-colors"
@@ -68,8 +70,10 @@ const Navigation = () => {
             size="icon"
             className="md:hidden"
             onClick={() => setIsOpen(!isOpen)}
+            aria-label={isOpen ? "Close menu" : "Open menu"}
+            aria-expanded={isOpen}
           >
-            {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+            {isOpen ? <X className="h-6 w-6" aria-hidden="true" /> : <Menu className="h-6 w-6" aria-hidden="true" />}
           </Button>
         </div>
 

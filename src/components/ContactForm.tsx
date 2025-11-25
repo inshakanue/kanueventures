@@ -6,7 +6,7 @@ const ContactForm = () => {
   const { ref, isVisible } = useScrollAnimation();
 
   return (
-    <section id="contact" className="py-32 relative overflow-hidden">
+    <section id="contact" className="py-32 relative overflow-hidden" aria-labelledby="contact-heading">
       <div className="container mx-auto px-6">
         <div
           ref={ref}
@@ -15,11 +15,11 @@ const ContactForm = () => {
           }`}
         >
           <div className="text-center space-y-4 mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-foreground">
+            <h2 id="contact-heading" className="text-4xl md:text-5xl font-bold text-foreground">
               Get in <span className="text-gold">Touch</span>
             </h2>
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-              Are you a founder building something transformative? We'd love to hear from you.
+              Are you a founder building something transformative? Connect with Kanue Ventures to discuss investment opportunities.
             </p>
           </div>
 

@@ -8,7 +8,7 @@ const AboutAnimated = () => {
   const { ref: parallaxRef, offset } = useParallax(0.4);
 
   return (
-    <section id="about" className="py-32 bg-charcoal-lighter relative overflow-hidden">
+    <section id="about" className="py-32 bg-charcoal-lighter relative overflow-hidden" aria-labelledby="about-heading">
       {/* Decorative Elements with Parallax */}
       <div 
         ref={parallaxRef}
@@ -27,10 +27,10 @@ const AboutAnimated = () => {
               titleVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
             }`}
           >
-            <h2 className="text-4xl md:text-5xl font-bold text-foreground">
+            <h2 id="about-heading" className="text-4xl md:text-5xl font-bold text-foreground">
               The future belongs to those who build it
             </h2>
-            <div className="h-1 w-24 bg-gold" />
+            <div className="h-1 w-24 bg-gold" aria-hidden="true" />
           </div>
 
           <div className="grid md:grid-cols-2 gap-12">

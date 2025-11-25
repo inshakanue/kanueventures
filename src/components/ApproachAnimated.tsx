@@ -28,7 +28,7 @@ const ApproachAnimated = () => {
   const { ref: parallaxRef, offset } = useParallax(0.5);
 
   return (
-    <section id="approach" className="py-32 bg-charcoal-lighter relative overflow-hidden">
+    <section id="approach" className="py-32 bg-charcoal-lighter relative overflow-hidden" aria-labelledby="approach-heading">
       {/* Decorative background elements with Parallax */}
       <div 
         ref={parallaxRef}
@@ -47,10 +47,10 @@ const ApproachAnimated = () => {
               headerVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
             }`}
           >
-            <h2 className="text-4xl md:text-5xl font-bold text-foreground">
+            <h2 id="approach-heading" className="text-4xl md:text-5xl font-bold text-foreground">
               Our <span className="text-gold">Approach</span>
             </h2>
-            <div className="h-1 w-24 bg-gold" />
+            <div className="h-1 w-24 bg-gold" aria-hidden="true" />
             <p className="text-xl text-muted-foreground leading-relaxed">
               We invest in people first, ideas second. The best businesses are built by exceptional 
               founders who combine vision with relentless execution.
